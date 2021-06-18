@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form action="#" id="contacts">
+    <div>
+        <label>
+            Your name<span>*</span> <br>
+            <input type="text" name="name" id="name">
+        </label>
+    </div>
+    <div>
+        <label>
+            Your phone<span>*</span> <br>
+            <input type="tel" name="phone" id="phone">
+        </label>
+    </div>
+    <div>
+        <label>
+            Your email<span>*</span> <br>
+            <input type="email" name="email" id="email">
+        </label>
+    </div>
+    <div>
+        <label>
+            Text <br>
+            <textarea name="text"></textarea>
+        </label>
+    </div>
+    <button id="val-btn">Submit</button>
+</form>
+<script src="script.js"></script>
+<script>
+    window.onload = () => {
+        document.getElementById('contacts').addEventListener('submit', e => {
+            let validation = new Validation('contacts');
+            if(!validation.valid){
+                e.preventDefault();
+            }
+        })
+    }
+</script>
+</body>
+</html>
