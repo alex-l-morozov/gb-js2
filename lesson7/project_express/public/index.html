@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Main page</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/shop.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body>
+<div id="app">
+<header class="top">
+        <header-comp :cartitems="cartGoods" @filtergoods='filterGoods' @addproduct='addProduct'></header-comp>
+</header>
+<main>
+    <section class="top-banner">
+        <div class="container">
+            <div class="top-banner-text">
+                <h1 class="top-banner-text-heading">THE BRAND</h1>
+                <p class="top-banner-text-desc">
+                    OF LUXERIOUS <span class="top-banner-text-desc-pink">FASHION</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container banners">
+            <div class="banners-box">
+                <a class="banner-item" href="#">
+                    <img class="banner-img" src="./assets/images/banner1.jpg" alt="banner 1">
+                    <div class="banner-info-block">
+                        <p class="banner-info">
+                            30% OFF<br />
+                            <span class="banner-info-pink">FOR WOMEN</span>
+                        </p>
+                    </div>
+                </a>
+                <a class="banner-item" href="#">
+                    <img class="banner-img" src="./assets/images/banner2.jpg" alt="banner 2">
+                    <div class="banner-info-block">
+                        <p class="banner-info">
+                            HOT DEAL<br />
+                            <span class="banner-info-pink">FOR MEN</span>
+                        </p>
+                    </div>
+                </a>
+                <a class="banner-item" href="#">
+                    <img class="banner-img" src="./assets/images/banner3.jpg" alt="banner 3">
+                    <div class="banner-info-block">
+                        <p class="banner-info">
+                            NEW ARRIVALS<br />
+                            <span class="banner-info-pink">FOR KIDS</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <a class="banner-item big-banner" href="#">
+                <img class="banner-img" src="./assets/images/banner4.jpg" alt="banner 4">
+                <div class="banner-info-block">
+                    <p class="banner-info">
+                        LUXIROUS & TRENDY<br />
+                        <span class="banner-info-pink">ACCESORIES</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="products-heading-block">Fetured Items</h3>
+            <p class="products-heading-text-block">Shop for items based on what we featured in this week</p>
+            <products-comp :showed='showedProducts' @addproduct='addProduct' @remove='remove'></products-comp>
+            <div class="product-button-block">
+                <a class="product-button-all" href="#">Browse All Product</a>
+            </div>
+        </div>
+    </section>
+    <section class="promo-block">
+        <div class="container promo-list-block">
+            <div class="promo-item-block">
+                <img src="./assets/images/promo1.svg" alt="">
+                <h3 class="promo-heading">Free Delivery</h3>
+                <p class="promo-text">
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </p>
+            </div>
+            <div class="promo-item-block">
+                <img src="./assets/images/promo2.svg" alt="">
+                <h3 class="promo-heading">Sales & discounts</h3>
+                <p class="promo-text">
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </p>
+            </div>
+            <div class="promo-item-block">
+                <img src="./assets/images/promo3.svg" alt="">
+                <h3 class="promo-heading">Quality assurance</h3>
+                <p class="promo-text">
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="sr-block">
+        <div class="container user-block">
+            <div class="reviews-block">
+                <div class="review-block">
+                    <div class="reviews-img-block">
+                        <img src="./assets/images/reviews1.png" alt="">
+                    </div>
+                    <div class="review-text-block">
+                        <p class="review-text">
+                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe-form">
+                <h4 class="subscribe-form-heading">Subscribe</h4>
+                <p class="subscribe-form-text">FOR OUR NEWLETTER AND PROMOTION</p>
+                <form class="subscribe-form-item">
+                    <input class="subscribe-form-input" type="email" name="email" value="" placeholder="Enter Your Email">
+                    <button class="subscribe-form-button" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container footer-block">
+        <div class="copyright-block">
+            <p class="copyright">© 2021  Brand  All Rights Reserved.</p>
+        </div>
+        <div class="social-block">
+            <a class="button-social button-social-f" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="button-social" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="button-social button-social-p" href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a class="button-social" href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="./assets/js/vue.js"></script>
+<script src="./assets/js/header.js"></script>
+<script src="./assets/js/products.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
